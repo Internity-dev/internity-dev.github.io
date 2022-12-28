@@ -6,9 +6,11 @@
     "generate": "nuxi generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "deploy": "gh-pages  -d dist -t true"
+    "deploy": "gh-pages  -d dist -t true",
+    "final": "npm run generate && npm run deploy"
   },
   "devDependencies": {
+    "@nuxtjs/tailwindcss": "^6.2.0",
     "gh-pages": "^4.0.0",
     "nuxt": "3.0.0"
   }
