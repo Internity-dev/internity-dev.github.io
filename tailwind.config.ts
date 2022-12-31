@@ -8,6 +8,12 @@ export default <Partial<Config>>{
                 inter: ["Inter", "sans-serif"],
                 poppins: ["Poppins", "sans-serif"],
             },
+            colors: {
+                "bg-primary": "#0144A7",
+                "text-white": "#FFFFFF",
+                "text-black": "22272E",
+                "text-primary": "006EF0",
+            },
         },
     },
 };
