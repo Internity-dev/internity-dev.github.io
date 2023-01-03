@@ -169,10 +169,10 @@
 /* Animationn width line */
 @keyframes line {
     0% {
-        stroke-dashoffset: 100;
+        stroke-dashoffset: 0;
     }
     100% {
-        stroke-dashoffset: 0;
+        stroke-dashoffset: 100;
     }
 }
 
@@ -192,6 +192,6 @@ svg * {
 #topline {
     stroke-dasharray: 100;
     stroke-dashoffset: 100;
-    animation: line 2s ease-in infinite alternate-reverse;
+    animation: line 3s ease-in infinite alternate-reverse;
 }
 </style>

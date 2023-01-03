@@ -82,3 +82,57 @@
         @apply absolute bottom-0 left-0 -z-10 drop-shadow-[0_4px_100px_#00F0C5];
     }
 }
+
+.featured {
+    @apply px-20 mt-20;
+
+    .featured__head {
+        @apply text-text-white text-xl font-bold capitalize;
+    }
+
+    .featured__content {
+        @apply flex gap-x-16 mt-5;
+
+        .item {
+            @apply flex-1 flex flex-col gap-y-5 bg-text-white p-8 rounded-xl;
+
+            .item__head {
+                @apply text-text-black text-base font-bold capitalize;
+            }
+
+            .item__body {
+                @apply text-text-black text-sm font-medium;
+            }
+        }
+    }
+}
+
+.download {
+    .download__content {
+        @apply flex gap-x-16 mt-5 items-center px-20;
+
+        .right__content {
+            .text {
+                .text__head {
+                    @apply text-text-white text-3xl font-bold capitalize;
+                }
+
+                .text__body {
+                    @apply text-text-white text-base font-medium mt-1;
+                }
+            }
+
+            .action {
+                @apply mt-5;
+
+                img {
+                    @apply w-[30%];
+                }
+            }
+        }
+    }
+}
+
+footer.copyright {
+    @apply text-text-white text-center mt-10 font-semibold py-5;
+}
