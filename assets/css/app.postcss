@@ -1,138 +1,152 @@
-.jumbotron {
-    @apply relative;
+section.jumbotron {
+	@apply relative;
 
-    .jumbotron__content {
-        @apply bg-bg-primary/20 backdrop-blur;
+	.jumbotron__content {
+		@apply bg-bg-primary/20 backdrop-blur;
 
-        .jumbotron__logo {
-            @apply flex items-center pt-5 pl-5;
+		.jumbotron__logo {
+			@apply flex items-center pt-5 pl-5;
 
-            .logo__text {
-                @apply font-inter font-bold uppercase text-text-white tracking-[0.15em] ml-2 text-lg;
-            }
-        }
+			.logo__text {
+				@apply font-inter font-bold uppercase text-text-white tracking-[0.15em] ml-2 text-lg;
+			}
+		}
 
-        .jumbotron__hero {
-            @apply flex justify-center items-center pt-10 px-32 gap-x-48;
-            .left__content {
-                .text {
-                    p {
-                        @apply text-4xl font-medium text-text-white leading-snug capitalize;
-                        word-spacing: 0.1em;
+		.jumbotron__hero {
+			@apply flex justify-center items-center pt-10 px-32 gap-x-48;
 
-                        span {
-                            background: linear-gradient(180deg, #77f7ff 0%, #4a9dff 100%);
-                            -webkit-background-clip: text;
-                            -webkit-text-fill-color: transparent;
-                            background-clip: text;
-                            text-fill-color: transparent;
-                            font-weight: bold;
-                        }
-                    }
-                }
+			.left__content {
+				.text {
+					p {
+						@apply text-4xl font-medium text-text-white leading-snug capitalize;
+						word-spacing: 0.1em;
 
-                .action {
-                    @apply mt-8 text-base flex gap-x-5;
-                    .action__button {
-                        @apply py-2 px-5 rounded-md text-text-white font-bold inline-block;
-                    }
-                    .signup {
-                        @apply relative z-10;
-                        background-image: linear-gradient(104.81deg, #0098da 12.76%, #2aef79 105.11%, #30ffc1 105.12%);
+						span {
+							background: linear-gradient(180deg, #77f7ff 0%, #4a9dff 100%);
+							-webkit-background-clip: text;
+							-webkit-text-fill-color: transparent;
+							background-clip: text;
+							text-fill-color: transparent;
+							font-weight: bold;
+						}
+					}
+				}
 
-                        &::before {
-                            @apply rounded-md absolute top-0 left-0 bottom-0 right-0 bg-origin-border border-2 border-transparent -z-10 opacity-0 text-text-white;
-                            @apply transition-opacity ease-in-out duration-300;
-                            content: "";
-                            background-image: linear-gradient(#0144a7, #0144a7), radial-gradient(circle at top left, #0098da, #30ffc1);
-                            background-clip: padding-box, border-box;
-                        }
+				.action {
+					@apply mt-8 text-base flex gap-x-5;
+					.action__button {
+						@apply py-2 px-5 rounded-md text-text-white font-bold inline-block;
+					}
+					.signup {
+						@apply relative z-10;
+						background-image: linear-gradient(104.81deg, #0098da 12.76%, #2aef79 105.11%, #30ffc1 105.12%);
 
-                        &:hover::before {
-                            @apply opacity-100;
-                        }
-                    }
+						&::before {
+							@apply rounded-md absolute top-0 left-0 bottom-0 right-0 bg-origin-border border-2 border-transparent -z-10 opacity-0 text-text-white;
+							@apply transition-opacity ease-in-out duration-300;
+							content: "";
+							background-image: linear-gradient(#0144a7, #0144a7), radial-gradient(circle at top left, #0098da, #30ffc1);
+							background-clip: padding-box, border-box;
+						}
 
-                    .signin {
-                        @apply border-2 border-transparent bg-origin-border z-10 relative;
-                        background-image: linear-gradient(#0144a7, #0144a7), radial-gradient(circle at top left, #0098da, #30ffc1);
-                        background-clip: padding-box, border-box;
+						&:hover::before {
+							@apply opacity-100;
+						}
+					}
 
-                        &::before {
-                            @apply absolute top-0 left-0 bottom-0 right-0 text-text-white -z-10 opacity-0;
-                            @apply transition-opacity ease-in-out duration-300;
-                            content: "";
-                            background-image: linear-gradient(104.81deg, #0098da 12.76%, #2aef79 105.11%, #30ffc1 105.12%);
-                        }
+					.signin {
+						@apply border-2 border-transparent bg-origin-border z-10 relative;
+						background-image: linear-gradient(#0144a7, #0144a7), radial-gradient(circle at top left, #0098da, #30ffc1);
+						background-clip: padding-box, border-box;
 
-                        &:hover::before {
-                            @apply opacity-100;
-                        }
-                    }
-                }
-            }
-        }
-    }
+						&::before {
+							@apply absolute top-0 left-0 bottom-0 right-0 text-text-white -z-10 opacity-0;
+							@apply transition-opacity ease-in-out duration-300;
+							content: "";
+							background-image: linear-gradient(104.81deg, #0098da 12.76%, #2aef79 105.11%, #30ffc1 105.12%);
+						}
 
-    .eclipse-1 {
-        @apply absolute top-0 right-0 -z-10 drop-shadow-[0_4px_100px_#00F0C5];
-    }
+						&:hover::before {
+							@apply opacity-100;
+						}
+					}
+				}
+			}
 
-    .eclipse-2 {
-        @apply absolute bottom-0 left-0 -z-10 drop-shadow-[0_4px_100px_#00F0C5];
-    }
+			.right__content {
+				/* responsive */
+				@apply hidden lg:flex;
+			}
+		}
+	}
+
+	.eclipse-1 {
+		@apply flex justify-end absolute top-0 right-0 -z-10 drop-shadow-[0_4px_100px_#00F0C5];
+
+		img {
+			@apply w-[50%] md:min-w-max;
+		}
+	}
+
+	.eclipse-2 {
+		@apply flex justify-start absolute bottom-0 left-0 -z-10 drop-shadow-[0_4px_100px_#00F0C5];
+
+		img {
+			@apply w-[50%] md:min-w-max;
+		}
+	}
 }
 
-.featured {
-    @apply px-20 mt-20;
+section.featured {
+	@apply px-20 mt-20;
 
-    .featured__head {
-        @apply text-text-white text-xl font-bold capitalize;
-    }
+	.featured__head {
+		@apply text-text-white text-xl font-bold capitalize;
+	}
 
-    .featured__content {
-        @apply flex gap-x-16 mt-5;
+	.featured__content {
+		@apply flex gap-x-16 mt-5;
 
-        .item {
-            @apply flex-1 flex flex-col gap-y-5 bg-text-white p-8 rounded-xl;
+		.item {
+			@apply flex-1 flex flex-col gap-y-5 bg-text-white p-8 rounded-xl;
 
-            .item__head {
-                @apply text-text-black text-base font-bold capitalize;
-            }
+			.item__head {
+				@apply text-text-black text-base font-bold capitalize;
+			}
 
-            .item__body {
-                @apply text-text-black text-sm font-medium;
-            }
-        }
-    }
+			.item__body {
+				@apply text-text-black text-sm font-medium;
+			}
+		}
+	}
 }
 
-.download {
-    .download__content {
-        @apply flex gap-x-16 mt-5 items-center px-20;
+section.download {
+	.download__content {
+		@apply flex justify-center gap-x-16 mt-5 items-center px-20;
 
-        .right__content {
-            .text {
-                .text__head {
-                    @apply text-text-white text-3xl font-bold capitalize;
-                }
+		.right__content {
+			.text {
+				.text__head {
+					@apply text-text-white text-3xl font-bold capitalize;
+				}
 
-                .text__body {
-                    @apply text-text-white text-base font-medium mt-1;
-                }
-            }
+				.text__body {
+					@apply text-text-white text-base font-medium mt-1;
+				}
+			}
 
-            .action {
-                @apply mt-5;
+			.action {
+				@apply mt-5;
 
-                img {
-                    @apply w-[30%];
-                }
-            }
-        }
-    }
+				img {
+					@apply w-[30%];
+				}
+			}
+		}
+	}
 }
 
 footer.copyright {
-    @apply text-text-white text-center mt-10 font-semibold py-5;
+	@apply text-text-white text-center mt-10 font-semibold py-5;
 }

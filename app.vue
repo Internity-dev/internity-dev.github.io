@@ -51,10 +51,10 @@ const featuredItem = [
                 </div>
             </div>
 
-            <div class="eclipse-1">
+            <div class="eclipse-1 eclipse">
                 <img src="/eclipse-1.png" alt="eclipse-1" />
             </div>
-            <div class="eclipse-2">
+            <div class="eclipse-2 eclipse">
                 <img src="/eclipse-2.png" alt="eclipse-2" />
             </div>
         </section>
