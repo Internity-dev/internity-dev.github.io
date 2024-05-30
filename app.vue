@@ -16,7 +16,7 @@ const featuredItem = [
 	},
 	{
 		image: VectorFeaturedPlace,
-		head: "Informasi tempat magang",
+		head: "Informasi tempat PKL",
 		body: "Dapatkan informasi tempat magang yang tersedia dan daftar dengan mudah",
 	},
 ];
